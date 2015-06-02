@@ -21,4 +21,9 @@ public class Number {
         
         return primeFlag
     }
+    
+    func randomNumber() -> Int{
+        let randomNumber = arc4random_uniform(99)+1
+        return Int(randomNumber)
+    }
 }

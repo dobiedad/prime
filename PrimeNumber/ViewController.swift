@@ -6,15 +6,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    func randomNumber(){
-        let randomNumber = arc4random_uniform(99)+1
-        numberLabel.text=String(randomNumber);
-        
-    }
+   
 
     
     @IBAction func RandomTapped(sender: AnyObject) {
-        [self .randomNumber()];
+        numberLabel.text=String(Number().randomNumber());
+        
+        if Number().isPrime(Number().randomNumber()){
+            let alert = UIAlertView()
+            alert.message = "Prime"
+            alert.addButtonWithTitle("Working!!")
+            alert.show()
+        
+        };
         
     }
     
